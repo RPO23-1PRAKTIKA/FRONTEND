@@ -1,0 +1,117 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: rgb(6, 179, 231);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-box {
+            background: rgb(218, 212, 212);
+            width: 100%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 35px;
+            
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            border-bottom: 5px solid #e0e0e0;
+            padding-bottom: 15px;
+            
+        }
+
+        .tab {
+            background: none;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+            cursor: pointer;
+            padding: 5px 0;
+            text-align: center;
+            
+        }
+
+        .tab.active {
+            color: white;
+            background-color: rgb(226, 221, 221);
+            width: 120px;
+            height: 40px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            border-radius: 25px;
+            margin-bottom: 15px;
+            padding: 5px 15px;
+            width: 100%;
+            height: 50px;
+        }
+
+        .input-group i {
+            color: #666;
+            margin-right: 10px;
+            font-size: 16px;
+            
+        }
+
+        .input-group input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .input-group input::placeholder {
+            color: #999;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: rgb(13, 171, 219);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: rgb(10, 140, 180);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #loginForm {
+            margin-top: 20px;
+        }
+    
+   

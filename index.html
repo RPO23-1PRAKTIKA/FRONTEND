@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и Вход</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+     <div class="form-box">
+        <div class="tabs">
+            <button class="tab active" onclick="showForm('register')">Регистрация</button>
+            <button class="tab" onclick="showForm('login')">Вход</button>
+        </div>
+        <form id="registerForm">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Введите Имя" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Введите Фамилию" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Введите email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Введите пароль" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Повторите пароль" required>
+            </div>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <form id="loginForm" class="hidden">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Введите email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Введите пароль" required>
+            </div>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+    <script>
+        function showForm(type) {
+            // Получаем элементы
+            const registerForm = document.getElementById('registerForm');
+            const loginForm = document.getElementById('loginForm');
+            const tabs = document.querySelectorAll('.tab');
+            
+            // Переключаем активный класс у табов
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Показываем/скрываем формы
+            if (type === 'register') {
+                registerForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+            } else {
+                registerForm.classList.add('hidden');
+                loginForm.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
